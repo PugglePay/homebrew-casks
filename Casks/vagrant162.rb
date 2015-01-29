@@ -7,7 +7,8 @@ cask :v1 => 'vagrant162' do
   homepage 'http://www.vagrantup.com'
   license :mit
 
-  install 'Vagrant.pkg'
+  pkg 'Vagrant.pkg'
+
   uninstall :script => { :executable => 'uninstall.tool', :input => %w[Yes] },
             :pkgutil => 'com.vagrant.vagrant'
 end
